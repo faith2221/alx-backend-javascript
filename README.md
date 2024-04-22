@@ -1,4 +1,4 @@
-**alx-backend-javascript
+alx-backend-javascript
 
 This repository includes all the projects from ALX Back-end Short-Specialization.
 
