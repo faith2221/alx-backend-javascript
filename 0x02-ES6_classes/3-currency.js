@@ -1,34 +1,36 @@
+/* eslint-disable no-underscore-dangle */
 export default class Currency {
   constructor(code, name) {
     this._code = code;
     this._name = name;
   }
 
-  get name() {
-    return this._name;
-  }
-
   get code() {
-    return this._code;
+    return (this._code);
+  }
+  
+  set code(value) {
+   if (typeof value !== 'String') {
+     throw new TyeError('Code must be a string');
+   } else {
+     this._code = value;
+   }
   }
 
-  set name(Newname) {
-    if (typeof Newname === 'string') {
-      this._name = Newname;
-    } else {
-      throw TypeError('Name must a string');
-    }
+  get name() {
+    return (this._name);
   }
-        
-  set name(Newcode) {
-    if (typeof Newcodee === 'string') {
-      this._name = Newcode;
+
+  set name(value) {
+    if (typeof value !== 'string') {
+      throw new TypeError('Name must be a string');
     } else {
-      throw TypeError('Code must a string');
+      this._name = value;
     }
   }
 
   displayFullCurrency() {
-    return `${this._name} (${this._code})`;
+    const result = `${this._name} (${this._code})`;
+    return (result);
   }
 }
